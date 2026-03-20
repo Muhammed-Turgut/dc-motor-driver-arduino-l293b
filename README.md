@@ -52,37 +52,6 @@ The Arduino UNO cannot drive DC motors directly due to its limited current outpu
 
 ---
 
-## 🔌 Circuit Connections
-
-```
-Arduino UNO        L293B
-───────────────────────────
-D9  (PWM)    →    Pin 1  (EN1)
-D8           →    Pin 2  (IN1)
-D7           →    Pin 7  (IN2)
-5V           →    Pin 16 (VCC)
-GND          →    Pin 4,5 (GND)
-
-L293B              DC Motor
-───────────────────────────
-Pin 3  (OUT1) →   Motor (+)
-Pin 6  (OUT2) →   Motor (-)
-
-External Power Supply
-───────────────────────────
-(+) → L293B Pin 8 (VS)
-(-) → GND (common ground)
-
-Diode Connections (Back-EMF Protection)
-────────────────────────────────────────
-D1: Anode → OUT1,  Cathode → GND
-D2: Anode → OUT2,  Cathode → GND
-```
-
-> ⚠️ **Important:** The Arduino GND and the external power supply GND must be connected to a common ground!
-
----
-
 ## 💻 Code
 
 ```cpp
